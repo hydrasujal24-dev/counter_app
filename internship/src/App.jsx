@@ -1,12 +1,14 @@
 import React from 'react'
-import Products from './components/Products/Products'
-import Counter2 from './components/Counter2.jsx'
+import TodoApp from './components/Todo/TodoApp'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>
-      <Counter2 />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<TodoApp />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
